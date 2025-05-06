@@ -2,10 +2,10 @@ import '../../styles/components/ServiceCard.css'
 
 const ServiceCard = ({ name, icon }) => {
   // Check if the icon is a URL (image path)
-  const isImageUrl = icon && (icon.startsWith('http') || icon.startsWith('/'));
+  // const isImageUrl = icon && (icon.startsWith('http') || icon.startsWith('/'));
   
-  // Check if the icon is an SVG path
-  const isSvgPath = icon && icon.startsWith('<svg') || icon.startsWith('data:image/svg');
+  // // Check if the icon is an SVG path
+  // const isSvgPath = icon && icon.startsWith('<svg') || icon.startsWith('data:image/svg');
   
   return (
     <div className="service-card">
