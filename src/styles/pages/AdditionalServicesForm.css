@@ -1,0 +1,328 @@
+.additional-services-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.additional-services-container {
+  max-width: 800px;
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.services-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+}
+
+.services-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.services-form {
+  text-align: left;
+  padding: 20px;
+}
+
+.service-selection {
+  margin-bottom: 30px;
+}
+
+.current-service {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.current-service label {
+  font-weight: 600;
+  color: #333;
+}
+
+.service-tag {
+  background-color: #e3f2fd;
+  color: #0277bd;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.additional-leads {
+  margin-bottom: 20px;
+}
+
+.additional-leads p {
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+.search-services {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.service-search-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+  background-color: white !important;
+}
+
+.service-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 0 0 4px 4px;
+  z-index: 10;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.suggestion-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.suggestion-item:hover {
+  background-color: #f5f5f5;
+}
+
+.selected-services {
+  margin-bottom: 20px;
+}
+
+.service-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.service-checkbox input {
+  margin-right: 10px;
+}
+
+.service-checkbox label {
+  font-size: 16px;
+  color: #333;
+}
+
+.location-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.radius-selection, .postcode-selection {
+  flex: 1;
+}
+
+.radius-dropdown {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  color: #333;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+}
+
+.expand-radius-button {
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 20px;
+}
+
+.expand-radius-button:hover {
+  background-color: #00a5b9;
+}
+
+.expand-radius-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.leads-counter {
+  background-color: #e3f2fd;
+  border-radius: 4px;
+  padding: 15px;
+  text-align: center;
+}
+
+.counter-number {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0277bd;
+}
+
+.counter-label {
+  font-size: 14px;
+  color: #0277bd;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.back-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.continue-button {
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #444;
+}
+
+.continue-button:hover {
+  background-color: #00a5b9;
+}
+
+/* Make sure all inputs have white backgrounds */
+input, select, textarea, 
+.google-places-autocomplete input {
+  background-color: white !important;
+  color: #333 !important;
+}
+
+@media (max-width: 768px) {
+  .location-filters {
+    flex-direction: column;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .back-button, .continue-button {
+    width: 100%;
+  }
+}
+
+/* Add these styles to the existing CSS file */
+
+.loading-indicator {
+  padding: 10px 15px;
+  text-align: center;
+  color: #666;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.error-message {
+  padding: 10px 15px;
+  text-align: center;
+  color: #d32f2f;
+  background-color: #ffebee;
+  border: 1px solid #ffcdd2;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.no-results {
+  padding: 10px 15px;
+  text-align: center;
+  color: #666;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+/* Add these styles to your existing CSS file */
+
+.selected-service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.service-tag-with-remove {
+  display: flex;
+  align-items: center;
+  background-color: #00bcd4;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.remove-tag-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  line-height: 1;
+}
+
+.remove-tag-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+} 

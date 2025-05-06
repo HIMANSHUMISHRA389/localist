@@ -1,0 +1,73 @@
+/* Feature Section Component Styles */
+.feature-section {
+  padding: 3rem 0 4rem;
+  background-color: #f9f9f9;
+  width: 100%;
+}
+
+.feature-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .feature-section .container {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .feature-section {
+    padding: 2.5rem 0 3.5rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .features-grid > div:last-child {
+    grid-column: span 2;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .feature-section {
+    padding: 2rem 0 3rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  
+  .features-grid > div:last-child {
+    grid-column: 1;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-section {
+    padding: 1.5rem 0 2.5rem;
+  }
+  
+  .feature-section .container {
+    padding: 0 1rem;
+  }
+  
+  .features-grid {
+    gap: 1rem;
+  }
+} 
